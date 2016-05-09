@@ -1,0 +1,317 @@
+@font-face {
+    font-family: 'walkway-sb';
+    src: url(fonts/Walkway_Bold.ttf);
+}
+
+html,
+body {
+    font-family: "walkway-sb", "Lato", sans-serif;
+    max-width: 100vw;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.strong {
+    color: #940101;
+    /*text-decoration: underline;*/
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #5a5a5a;
+}
+
+h4 {
+    font-size: 1.5rem;
+    color: #7D7D7D;
+}
+
+div#email > h1 > a {
+    color: #5a5a5a;
+}
+
+#skills{
+    list-style: circle;
+}
+
+div#email > h1 > a:hover {
+    /*-webkit-animation: flicker 2s forwards; !* Safari 4+ *!*/
+    /*-moz-animation: flicker 2s forwards; !* Fx 5+ *!*/
+    /*-o-animation: flicker 2s forwards; !* Opera 12+ *!*/
+    /*animation: flicker 2s forwards; !* IE 10+, Fx 29+ *!*/
+}
+
+.scene {
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    height: 20px;
+    width: 100vw;
+    z-index: 300;
+    background: rgba(255, 255, 255, 0.80);
+}
+
+/*Logo Header*/
+ul.nav {
+    padding-right: 20px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    margin-top: 0;
+    display: block;
+}
+
+ul.nav {
+    float: right;
+    z-index: 300;
+}
+
+ul.nav > li {
+    float: left;
+}
+
+ul.nav > li > a {
+    padding-top: 0;
+    padding-bottom: 0;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: 3px 3px 25px #ffffff;
+}
+
+ul.nav > li.active > a,
+ul.nav > li.active {
+    -webkit-animation: flicker 2s forwards; /* Safari 4+ */
+    -moz-animation: flicker 2s forwards; /* Fx 5+ */
+    -o-animation: flicker 2s forwards; /* Opera 12+ */
+    animation: flicker 2s forwards; /* IE 10+, Fx 29+ */
+}
+
+#gallery {
+    padding-top: 2em;
+}
+
+div#gallery > div > ul {
+    padding: 10px 0 0 0;
+}
+
+div#gallery > div > ul > li {
+    float: left;
+}
+
+#gallery-list > ul > table > tbody > tr {
+    line-height: 0;
+}
+
+div#gallery-list {
+    /*border-top: 1px solid;*/
+}
+
+div#gallery-box {
+    margin-top: 50px;
+}
+
+.nav > li > a:focus,
+.nav > li > a:hover {
+    background-color: transparent;
+}
+
+div.spaced > div > h1 {
+    letter-spacing: 8px;
+    font-size: 3em;
+}
+
+#wwdls {
+    height: 20px;
+    padding: 3px;
+    opacity: 0.68;
+}
+
+.center {
+    top: 43vh;
+}
+
+div > p:first-of-type:first-letter{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 2em;
+    line-height: 1em;
+    padding-right: 1px;
+}
+
+.sneak {
+    display: none;
+}
+
+#title {
+    opacity: 0;
+    top: 42vh;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+    animation-duration: 1.25s;
+    animation-name: fadein;
+}
+#angle-box p{
+    opacity: 0;
+    transform: rotate3d(-2, 2, 0, 90deg);
+}
+.angle-box p {
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-duration: 3.5s;
+    animation-name: rotout;
+}
+
+@keyframes rotout {
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: rotate3d(0, 0, -1, 0deg);
+    }
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/*Diamond Simple and Clean*/
+.df-view {
+    width: 100px; /*Based on diagonal*/
+    height: 100px;
+}
+
+.df-holder {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /*-webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);*/
+    /*clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);*/
+    -webkit-clip-path: polygon(100% 0%, 100% 50%, 0% 100%, 0% 50%);
+    clip-path: polygon(100% 0%, 100% 50%, 0% 100%, 0% 50%);
+    background-color: #000000;
+
+}
+
+/*df-image top must be the same ass df-view*/
+.df-image {
+    height: 100%;
+    left: 0; /*Set this with Javascript*/
+    position: relative;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    opacity: .6;
+}
+
+.df-image:hover,
+.df-image.active {
+    /*-webkit-filter: grayscale(0);*/
+    /*filter: grayscale(0);*/
+    /*opacity: 1;*/
+    -webkit-animation: imageFilter .5s forwards; /* Safari 4+ */
+    -moz-animation: imageFilter .5s forwards; /* Fx 5+ */
+    -o-animation: imageFilter .5s forwards; /* Opera 12+ */
+    animation: imageFilter .5s forwards; /* IE 10+, Fx 29+ */
+}
+#gallery .image-title td {
+    padding-top: 10px;
+    line-height: 1em;
+    margin: 0;
+    text-align: right;
+    /*-ms-transform: rotate(-45deg); !* IE 9 *!*/
+    /*-webkit-transform: rotate(-45deg); !* Chrome, Safari, Opera *!*/
+    /*transform: rotate(-45deg);*/
+    -ms-transform: rotate(-25deg); /* IE 9 */
+    -webkit-transform: rotate(-25deg); /* Chrome, Safari, Opera */
+    transform: rotate(-25deg);
+}
+
+#gallery .image-title p {
+    max-width: 100px;
+    font-weight: 900;
+}
+
+/*Skype button*/
+#SkypeButton_Call_cody.wiki_1 p {
+    display: none;
+}
+#SkypeButton_Call_cody.wiki_1_paraElement > a > img {
+    margin: 0 !important;
+}
+
+/*Browser Alert*/
+#browser-alert {
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 10px;
+}
+
+/*Animations*/
+@keyframes fadein {
+    to {
+        opacity: 0.68;
+    }
+}
+
+@keyframes flicker {
+    to {
+        color: #940101;
+        text-decoration: underline;
+        font-weight: 700;
+        font-size: 1.05em;
+    }
+}
+
+@keyframes imageFilter {
+    to {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+        opacity: 1;
+    }
+}
+
+#linkedin-color{color:#007bb5}
+#youtube-color{color:#cd201f}
+#skype-color{color:#00aff0}
+#github-color{color:#913399}
+
+
+/*Media Queries*/
+@media screen and (min-width: 800px) {
+    .nav > li > a:hover {
+        font-weight: 900;
+        -webkit-animation: flicker 2s forwards; /* Safari 4+ */
+        -moz-animation: flicker 2s forwards; /* Fx 5+ */
+        -o-animation: flicker 2s forwards; /* Opera 12+ */
+        animation: flicker 2s forwards; /* IE 10+, Fx 29+ */
+    }
+
+    ul.nav {
+        position: fixed;
+        top: 44vh;
+        right: auto;
+        left: 0;
+        width: 125px;
+
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h4 {
+        font-size: 2rem;
+    }
+
+    ul.nav > li {
+        float: none;
+    }
+
+    .navbar-nav > li {
+        float: none;
+    }
+}
